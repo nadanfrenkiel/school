@@ -1,5 +1,8 @@
+
+package test1;
+
 import java.util.*;
-public class Tar1
+public class Test2
 {
 	static Scanner reader=new Scanner (System.in);
 	public static void main (String[]args)

@@ -1,18 +1,18 @@
-package what;
+package test;
 
 import java.io.FileInputStream;
 import java.util.*;
 
-public class WhatWhy {			
-	FileInputStream input = new FileInputStream("input.txt");
-	static Scanner reader = new Scanner(input);
+public class WhatWhy2 {			
 
 	public static void main(String[] args) {
-		try {
-		
+		try (FileInputStream input = new FileInputStream("input.txt"); Scanner reader = new Scanner(input)) {
+			
+//			Scanner reader = new Scanner(input);		
 			int Twonum, temp, temp2, temp3;
-			System.out.println("Enter num");
+			System.out.println("Test> Enter num in using block");
 			Twonum = reader.nextInt();
+			
 //			limit=reader.nextInt();
 
 			temp2 = Twonum / 10;
@@ -34,6 +34,7 @@ public class WhatWhy {
 			}
 		}
 		     catch(Exception e) {
+		    	 System.out.println("Error thrown " + e.toString());
 		         e.getStackTrace();
 		      }
 	}
