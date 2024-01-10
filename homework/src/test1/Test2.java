@@ -7,19 +7,40 @@ public class Test2
 	static Scanner reader=new Scanner (System.in);
 	public static void main (String[]args)
 	{
-		int license, speed, limit;
-		System.out.println("Enter num");
-		license=reader.nextInt();
-		speed=reader.nextInt();
-		limit=reader.nextInt();
+		System.out.println("enter length of array");
+		int l = reader.nextInt ();
+		System.out.println("enter num");
+		int num = reader.nextInt();
+		int [] a = new int [l];
+		int n =0, n2 = 0, n2c = 0, nc = 0, hold;
+		boolean w = true;
+		for (int i = 0; i < a.length; i++) {
+			a[i] = reader.nextInt ();
+		}
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; i < a.length; i++) {
+				n = num - a [i];
+				if (num - a [i] == a [j]) {
+					System.out.println("(" + a[i] + ","+ a[j] + ")");
+				}
+			}
+		}
+		System.out.println ("these were the schum(s)");
+
 		
-		//		four=nadan.nextDouble();
-		if (speed > limit)	{
-			System.out.println("pay:" + (speed-limit)*30+ " ID:" + license);
+		
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; i < a.length; i++) {
+				n = num - a [i];
+				if (a [i]* a [j] == num) {
+					System.out.println("(" + a[i] + ","+ a[j] + ")");
+				}
+			}
 		}
-		else {
-			System.out.println("good job");
-		}
+		System.out.println ("these were the machpelas");
+		
+
+
 
 	}
 }
